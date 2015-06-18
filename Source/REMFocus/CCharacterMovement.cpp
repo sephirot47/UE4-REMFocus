@@ -38,7 +38,7 @@ void UCCharacterMovement::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	if (!RotationInput.IsZero())
 	{
 		CurrentRot += RotationInput * rotSpeed * DeltaTime;
-		if (actor) actor->AddControllerRollInput(RotationInput.Y * DeltaTime);
+		if (actor) actor->AddControllerPitchInput(RotationInput.Y * DeltaTime);
 		if (actor) actor->AddControllerYawInput(RotationInput.Z * DeltaTime);
 
 		RotationInput = FVector::ZeroVector;
